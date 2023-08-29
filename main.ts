@@ -14,6 +14,11 @@ namespace StatusBarKind {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (screen2 == 0) {
         if (mySprite2.overlapsWith(play_button)) {
+            mySprite = sprites.create(assets.image`john`, SpriteKind.Player)
+            mySprite.setImage(assets.image`john left`)
+            mySprite.x = 370
+            mySprite.y = 85
+            controller.moveSprite(mySprite)
             zombie = sprites.create(assets.image`zombie`, SpriteKind.zombie)
             zombie.follow(mySprite, 50)
             zombie_hp = statusbars.create(20, 4, StatusBarKind.EnemyHealth)
@@ -57,11 +62,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
                 `, SpriteKind.Food)
             med.setPosition(248, 69)
             ammo_box.setPosition(265, 70)
-            mySprite = sprites.create(assets.image`john`, SpriteKind.Player)
-            mySprite.setImage(assets.image`john left`)
-            mySprite.x = 370
-            mySprite.y = 85
-            controller.moveSprite(mySprite)
             tiles.setCurrentTilemap(tilemap`road`)
             scene.setBackgroundColor(11)
             scene.cameraFollowSprite(mySprite)
@@ -737,8 +737,8 @@ let ammo_box: Sprite = null
 let med: Sprite = null
 let direction = 0
 let zombie_hp: StatusBarSprite = null
-let mySprite: Sprite = null
 let zombie: Sprite = null
+let mySprite: Sprite = null
 let mySprite2: Sprite = null
 let tutorial: Sprite = null
 let settings2: Sprite = null

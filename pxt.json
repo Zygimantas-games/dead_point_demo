@@ -8,7 +8,8 @@
         "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.2",
         "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0",
         "sprite-scaling": "*",
-        "arcade-character-animations": "github:microsoft/arcade-character-animations#v0.0.2"
+        "arcade-character-animations": "github:microsoft/arcade-character-animations#v0.0.2",
+        "multiplayer": "*"
     },
     "files": [
         "main.blocks",
